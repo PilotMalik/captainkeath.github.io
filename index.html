@@ -7,6 +7,16 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLDK4ZJD2H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GLDK4ZJD2H');
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,6 +30,7 @@
             padding: 0 20px;
             box-sizing: border-box;
         }
+
         .background {
             position: absolute;
             top: 0;
@@ -27,6 +38,18 @@
             width: 100%;
             height: 100%;
             background-image: url('aviation-background.jpg'); /* Local aviation-themed background image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .lg-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background.png'); /* Local aviation-themed background image */
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -52,7 +75,6 @@
             justify-content: center;
             margin: 10px 0;
             padding: 10px;
-            background: #0073e6;
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
@@ -85,32 +107,49 @@
             }
         }
 
+        .text-2xs {
+            font-size: 0.65rem;
+            line-height: 0.75rem;
+        }
+
     </style>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
+
 <body>
-    <div class="background"></div>
-    <div class="p-5 container glass">
-        <div class="mb-7 flex justify-center w-full h-full">
-            <img src="PFP_REAL.jpg" alt="Profile Picture" class="rounded-full">
+    <div class="background sm:hidden"></div>
+    <div class="lg-background hidden sm:block"></div>
+
+    <div class="flex p-5 container glass">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2">
+            <div class="mb-7 flex justify-center w-full h-full p-8">
+                <img src="pfpreal3.jpg" alt="Profile Picture" class="lg:hidden rounded-full max-w-[200px] max-h-[200px]">
+
+                <img src="pfp.jpg" alt="Profile Picture" class="hidden lg:block rounded-lg">
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <a href="https://100llapparel.com/discount/PILOTMALIK" class="bg-indigo-500 link flex flex-col items-center pb-0">
+                    <div class="flex">
+                        <img class="rounded-md" src="100LL_logo_resized.png" alt="100LL Logo">
+                        <p class="pl-2">100LL Apparel</p>
+                    </div>
+
+                    <span class="mt-2 text-2xs leading-7">Code "PILOTMALIK" 15% off! ✈️</span>
+                </a>
+
+                <a href="https://instagram.com/pilotmalik4" class="bg-indigo-500 link">
+                    <img src="instagram_logo_resized.png" alt="Instagram Logo">
+                    <p class="pl-2">Instagram</p>
+                </a>
+
+                <a href="https://www.tiktok.com/@pilotmalik4?lang=en" class="bg-indigo-500 link">
+                    <img src="tiktok_logo_resized.png" alt="Tiktok Logo">
+                    <p class="pl-2">TikTok</p>
+                </a>
+            </div>
         </div>
-
-        <a href="https://100llapparel.com/discount/PILOTMALIK" class="link">
-            <img style="border-radius:5px" src="100LL_logo_resized.png" alt="100LL Logo">
-            <p class="pl-2">100LL Apparel - <span class="text-xs">15% off! ✈️</span></p>
-        </a>
-
-        <a href="https://instagram.com/pilotmalik4" class="link">
-            <img src="instagram_logo_resized.png" alt="Instagram Logo">
-            <p class="pl-2">Instagram</p>
-        </a>
-
-        <a href="https://www.tiktok.com/@pilotmalik4?lang=en" class="link">
-            <img src="tiktok_logo_resized.png" alt="Tiktok Logo">
-            <p class="pl-2">Tiktok</p>
-        </a>
     </div>
 </body>
 </html>
