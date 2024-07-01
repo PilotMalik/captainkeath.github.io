@@ -6,6 +6,7 @@
     <title>Pilot Malik ✈️</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,37 +29,26 @@
             background-image: url('aviation-background.jpg'); /* Local aviation-themed background image */
             background-size: cover;
             background-position: center;
-            filter: blur(8px);
             z-index: -1;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            max-width: 90%;
-            position: relative;
-            z-index: 1;
-            box-sizing: border-box;
-            margin: auto;
         }
 
         .glass {
-            background: rgba( 255, 255, 255, 0.1 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            backdrop-filter: blur( 5.5px );
-            -webkit-backdrop-filter: blur( 5.5px );
+            background: rgba( 255, 255, 255, 0.05 );
+            box-shadow: 0 8px 32px 0;
+            backdrop-filter: blur( 7px );
+            -webkit-backdrop-filter: blur( 7px );
             border-radius: 10px;
         }
-        
+
         .profile-pic {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
         }
+
         .link {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
             margin: 10px 0;
             padding: 10px;
@@ -69,14 +59,11 @@
             transition: background 0.3s;
             position: relative;
         }
+
         .link:hover {
             background: #005bb5;
         }
-        .link img {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 8px;
-        }
+
         .subtitle {
             font-size: 14px;
             color: #fff;
@@ -97,31 +84,32 @@
                 padding: 15px;
             }
         }
-        @media (max-width: 600px) {
-            .profile-pic {
-                width: 100px;
-                height: 100px;
-            }
-            .link {
-                font-size: 14px;
-                padding: 8px;
-            }
-        }
+
     </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
     <div class="background"></div>
-    <div class="container glass">
-        <img src="PFP_REAL.jpg" alt="Profile Picture" class="profile-pic">
-        <h1>@pilotmalik4</h1>
+    <div class="p-5 container glass">
+        <div class="mb-7 flex justify-center w-full h-full">
+            <img src="PFP_REAL.jpg" alt="Profile Picture" class="rounded-full">
+        </div>
+
         <a href="https://100llapparel.com/discount/PILOTMALIK" class="link">
-            <img src="100LL_logo_resized.png" alt="100LL Logo">
-            100LL Apparel
-            <span class="subtitle">Click for 15% off! ✈️</span>
+            <img style="border-radius:5px" src="100LL_logo_resized.png" alt="100LL Logo">
+            <p class="pl-2">100LL Apparel - <span class="text-xs">15% off! ✈️</span></p>
         </a>
+
         <a href="https://instagram.com/pilotmalik4" class="link">
             <img src="instagram_logo_resized.png" alt="Instagram Logo">
-            Instagram
+            <p class="pl-2">Instagram</p>
+        </a>
+
+        <a href="https://www.tiktok.com/@pilotmalik4?lang=en" class="link">
+            <img src="tiktok_logo_resized.png" alt="Tiktok Logo">
+            <p class="pl-2">Tiktok</p>
         </a>
     </div>
 </body>
